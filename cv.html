@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bảo Hoàng Nguyễn Văn — Backend Developer</title>
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --accent: #2f6fb3;
+      --text: #2d3436;
+      --muted: #6b7280;
+      --bg: #f3f5f8;
+      --card: #ffffff;
+      --border: #e5e9f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 32px auto;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(30, 58, 95, 0.12);
+      overflow: hidden;
+    }
+
+    /* NOTE: Header block with name, title, and contact info */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 40px 48px;
+    }
+
+    header h1 { font-size: 2.1rem; letter-spacing: 0.5px; }
+
+    header .role {
+      font-size: 1.15rem;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin-top: 18px;
+      font-size: 0.9rem;
+      opacity: 0.95;
+    }
+
+    .contact a { color: #fff; }
+
+    main { padding: 36px 48px 48px; }
+
+    section + section { margin-top: 32px; }
+
+    h2 {
+      color: var(--primary);
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    .entry + .entry { margin-top: 24px; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+    }
+
+    .entry-header .org { font-weight: 600; font-size: 1.05rem; }
+
+    .entry-header .period {
+      color: var(--muted);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .entry .position {
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .project { margin-top: 14px; }
+
+    .project h3 { font-size: 0.98rem; color: var(--primary); margin-bottom: 6px; }
+
+    ul { padding-left: 22px; }
+
+    li { margin-bottom: 3px; }
+
+    ul ul { margin-top: 3px; }
+
+    .skills-table { width: 100%; border-collapse: collapse; }
+
+    .skills-table th {
+      text-align: left;
+      color: var(--primary);
+      padding: 8px 16px 8px 0;
+      width: 120px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-table td {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      .page { margin: 0; border-radius: 0; }
+      header, main { padding-left: 24px; padding-right: 24px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; border-radius: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Bảo Hoàng Nguyễn Văn</h1>
+      <p class="role">Backend Developer</p>
+      <div class="contact">
+        <span>DOB: 02/06/2000</span>
+        <span>Gender: Male</span>
+        <span>Phone: 0826896586</span>
+        <span>Email: <a href="mailto:baohoang0206@gmail.com">baohoang0206@gmail.com</a></span>
+        <span>Address: Ha Noi, Viet Nam</span>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Objective</h2>
+        <p>
+          Experienced FullStack developer with 4+ years of building web applications, familiar with
+          cloud platforms, and has good English skills. Seeking a role where I can contribute not just
+          to goals, but to culture also. Proven ability to cultivate open communication and positive
+          team dynamics that drive friendly cooperation and high-quality results.
+        </p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="org">FPT University</span>
+            <span class="period">2018 – 2022</span>
+          </div>
+          <p class="position">Bachelor's degree of Software Engineering</p>
+          <ul>
+            <li>Field of study: Software Engineering, Blockchain Application Development</li>
+            <li>Best student of the Software Engineering Program 2022</li>
+            <li>GPA: 8.59/10</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="org">CMC Global</span>
+            <span class="period">October 2022 – Present</span>
+          </div>
+          <p class="position">Backend Developer</p>
+
+          <div class="project">
+            <h3>Project: Car Rental</h3>
+            <ul>
+              <li>BE:
+                <ul>
+                  <li>Designing and developing an authentication backend service</li>
+                  <li>Developing BFF backend service</li>
+                  <li>Integrating 3rd party API for customer care, cars management</li>
+                  <li>Developing REST APIs to manage subscription plans, users</li>
+                  <li>Migrating data from legacy systems</li>
+                </ul>
+              </li>
+              <li>Technologies:
+                <ul>
+                  <li>AWS cloud services: AWS SNS, SQS, Cognito User pool, Identity Pool, API Gateway, AWS IAM authorization</li>
+                  <li>Monitoring tools: New Relic</li>
+                  <li>Applying DDD Architecture, Microservice Architecture, DI Pattern</li>
+                  <li>Backend framework: NestJS</li>
+                  <li>Using PostgreSQL, TypeORM</li>
+                  <li>Using Docker</li>
+                  <li>Writing Integration Test and manual test using Postman</li>
+                  <li>Using the RBAC security model with JWT</li>
+                  <li>Using the CircleCI CI/CD platform</li>
+                  <li>Documenting Node.js API using Swagger</li>
+                </ul>
+              </li>
+              <li>FE:
+                <ul>
+                  <li>Design user interface using NextJS</li>
+                  <li>TailwindCSS</li>
+                  <li>Using ShadCN as UI Library</li>
+                  <li>Redux as state management</li>
+                  <li>Using TanStack to handle caching, synchronization, and updating data</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Project: Digital payment platform</h3>
+            <ul>
+              <li>Developing REST APIs to:
+                <ul>
+                  <li>Managing users' resources</li>
+                  <li>Integrating payment APIs from internal services</li>
+                  <li>Debugging, monitoring production logs</li>
+                  <li>Integrating, practicing security measures</li>
+                  <li>Encrypt and rotate sensitive data</li>
+                  <li>Develop risk management APIs</li>
+                </ul>
+              </li>
+              <li>Technologies:
+                <ul>
+                  <li>AWS cloud services: AWS SNS, SQS, KMS, SM, S3, AWS Logs</li>
+                  <li>Applying Microservice Architecture</li>
+                  <li>Backend framework: Express.js</li>
+                  <li>Using MongoDB, Mongoose</li>
+                  <li>Using the Snyk security platform</li>
+                  <li>Using the Jenkins CI/CD platform</li>
+                  <li>Documenting Node.js API using Swagger</li>
+                  <li>Using Cursor IDE</li>
+                  <li>Bitbucket version control</li>
+                  <li>Stripe third-party payment processor</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Project: International payments platform</h3>
+            <ul>
+              <li>Developing REST APIs to manage user registration, legal identities using serverless</li>
+              <li>Write unit test, integration test</li>
+              <li>Technologies:
+                <ul>
+                  <li>AWS cloud services: AWS Lambda, AWS S3, AWS Logs, AWS SNS, AWS SQS</li>
+                  <li>Applying DI Pattern using Tsyringe</li>
+                  <li>Writing Integration Test, Unit Test, and manual test using Postman</li>
+                  <li>Using GitHub Actions CI/CD platform</li>
+                  <li>Using the LaunchDarkly platform to manage live features</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Project: SEO optimization platform</h3>
+            <ul>
+              <li>BE:
+                <ul>
+                  <li>Developing REST APIs for crawl management, user management and analytics report</li>
+                  <li>Designing database</li>
+                  <li>Developing Crawl Workers</li>
+                  <li>Integrate with CMS Platform</li>
+                  <li>Authenticate using OAuth</li>
+                </ul>
+              </li>
+              <li>Technologies:
+                <ul>
+                  <li>Google Cloud Platform: Memory store, Cloud Run, Pub/sub</li>
+                  <li>Socket.IO</li>
+                  <li>Using NestJS</li>
+                  <li>Writing Integration Test, Unit Test, manual test, performance test using Postman</li>
+                  <li>Using GitHub Actions CI/CD platform</li>
+                  <li>Using Cursor IDE</li>
+                </ul>
+              </li>
+              <li>FE:
+                <ul>
+                  <li>Build users interface using React with Vite, apply UI library Radix-UI, using React Context custom hooks as reusable common components</li>
+                  <li>Using Redux as state management, RTX Query as middleware support BE communication</li>
+                  <li>Design responsive system and styling with TailwindCSS</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="org">FPT Software</span>
+            <span class="period">Oct 2021 – Sep 2022</span>
+          </div>
+          <p class="position">Backend Developer</p>
+
+          <div class="project">
+            <h3>Project: NFT Marketplace</h3>
+            <ul>
+              <li>Crawling data from the Ethereum blockchain</li>
+              <li>Developing REST APIs and gRPC to manage NFT status off-chain</li>
+              <li>Writing Unit test, Integration test, E2E Test</li>
+              <li>Creating the database structure</li>
+              <li>Technologies:
+                <ul>
+                  <li>The Graph, GraphQL</li>
+                  <li>NestJS</li>
+                  <li>Jest</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <table class="skills-table">
+          <tr>
+            <th>Backend</th>
+            <td>NestJS, ExpressJS, JWT, PostgreSQL, MySQL, MongoDB, ORM, ODM, Jest</td>
+          </tr>
+          <tr>
+            <th>Front end</th>
+            <td>Html, Css, JS, React, NextJS, Shadcn, TailwindCSS</td>
+          </tr>
+          <tr>
+            <th>DevOps</th>
+            <td>AWS, GCP, Github Action</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Interests</h2>
+        <p>Valorant, Soccer and Anime</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
